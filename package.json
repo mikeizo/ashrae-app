@@ -4,9 +4,31 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "lint": "eslint --ext .vue,.ts,.js,.mjs --ignore-path .gitignore ."
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.4"
+    "@nuxt/types": "^2.15.8",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxt/typescript-runtime": "^2.1.0",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/eslint-config": "^12.0.0",
+    "@nuxtjs/eslint-module": "^3.1.0",
+    "@nuxtjs/stylelint-module": "^4.1.0",
+    "@nuxtjs/tailwindcss": "^6.1.2",
+    "@sendgrid/mail": "^7.7.0",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nuxt": "^3.0.0",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "vee-validate": "^4.7.3",
+    "vue-easy-lightbox": "^1.10.0",
+    "yup": "^0.32.11"
   }
 }
