@@ -57,10 +57,10 @@
       </form>
     </elementsWidget>
     <elementsWidget title="Scholarship Form">
-      <a href="http://www.ashraebistate.org/files/Applicant_Evaluation_Form.doc"
+      <a :href="`${baseUrl}files/Applicant_Evaluation_Form.doc`"
         >Evaluation Form</a
       ><br />
-      <a href="http://www.ashraebistate.org/files/Scholarship_Application.doc"
+      <a :href="`${baseUrl}files/Scholarship_Application.doc`"
         >Scholarship Application</a
       >
     </elementsWidget>
@@ -69,8 +69,9 @@
 
 <script setup>
 const config = useRuntimeConfig()
+const baseUrl = config.public.apiBase
 const { data: event } = await useFetch(
-  `${config.public.apiBase}events/upcoming?_format=json`
+  `${baseUrl}events/upcoming?_format=json`
 )
 
 function formatDate(rawDate) {

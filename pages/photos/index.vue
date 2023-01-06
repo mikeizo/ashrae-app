@@ -9,7 +9,7 @@
       >
         <a :href="photos.view_node">
           <img
-            :src="`http://dev.ashrae${photos.field_photos}`"
+            :src="`${config.public.apiBase}${photos.field_photos}`"
             class="object-cover h-64 w-96 rounded-lg border border-gray-100"
           />
           <div class="mt-2">{{ photos.title }}</div>
