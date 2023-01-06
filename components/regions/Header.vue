@@ -71,7 +71,7 @@
               >Newsletters</a
             >
           </li>
-          <li class="text-center">
+          <li class="text-center border-b lg:border-0 border-blue-100">
             <a
               class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
               href="/photos"
