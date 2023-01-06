@@ -9,11 +9,13 @@ export default defineEventHandler(async (event) => {
     return send(event)
   }
 
-  const { fullName = '', email = '', message = '' } = body
+  const { fullName = '', email = '', message = '', fname } = body
   const regex = /^[A-Z0-9._-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
 
   // Form validation
-  if (!fullName || fullName.length > 30 || fullName.length < 3) {
+  if (fname || fname == '') {
+    event.node.res.statusCode = 400
+  } else if (!fullName || fullName.length > 30 || fullName.length < 3) {
     event.node.res.statusCode = 400
   } else if (!email || email.length > 50 || !regex.test(email)) {
     event.node.res.statusCode = 400

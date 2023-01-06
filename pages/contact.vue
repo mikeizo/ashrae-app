@@ -4,14 +4,13 @@
     <div class="lg:grid lg:grid-cols-12 lg:gap-x-8">
       <div class="w-full lg:col-span-9">
         <Form
+          v-if="!formValid"
           @submit="submitForm"
           :validation-schema="schema"
           v-slot="{ errors }"
         >
+          <input type="text" name="fname" class="hidden" />
           <div class="grid grid-cols-2 gap-6">
-            <!--
-              <input type="text" name="bename" class="hidden"/>
-            -->
             <div class="">
               <label for="fullName" class="block">Name</label>
               <Field
@@ -62,6 +61,13 @@
             </div>
           </div>
         </Form>
+        <div
+          v-if="formValid"
+          class="bg-green-100 rounded-lg py-5 px-6 mb-4 text-base text-green-700"
+          role="alert"
+        >
+          Success! Your message has been sent.
+        </div>
       </div>
       <RegionsRightRail />
     </div>
@@ -71,6 +77,7 @@
 <script setup>
 import { object, string } from 'yup'
 
+let formValid = ref(false)
 const formData = {}
 const schema = object().shape({
   fullName: string()
@@ -84,6 +91,8 @@ async function submitForm() {
   await $fetch('/api/email', {
     method: 'POST',
     body: formData
+  }).then(() => {
+    formValid.value = true
   })
 }
 </script>
