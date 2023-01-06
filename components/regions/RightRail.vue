@@ -57,12 +57,13 @@
       </form>
     </elementsWidget>
     <elementsWidget title="Scholarship Form">
-      <a :href="`${baseUrl}files/Applicant_Evaluation_Form.doc`"
-        >Evaluation Form</a
-      ><br />
-      <a :href="`${baseUrl}files/Scholarship_Application.doc`"
-        >Scholarship Application</a
-      >
+      <a :href="`${baseUrl}files/Applicant_Evaluation_Form.doc`">
+        Evaluation Form
+      </a>
+      <br />
+      <a :href="`${baseUrl}files/Scholarship_Application.doc`">
+        Scholarship Application
+      </a>
     </elementsWidget>
   </div>
 </template>
@@ -70,9 +71,7 @@
 <script setup>
 const config = useRuntimeConfig()
 const baseUrl = config.public.apiBase
-const { data: event } = await useFetch(
-  `${baseUrl}events/upcoming?_format=json`
-)
+const { data: event } = await useFetch(`${baseUrl}events/upcoming?_format=json`)
 
 function formatDate(rawDate) {
   const date = new Date(rawDate)
