@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full lg:col-span-3">
+  <div class="w-full flex flex-col space-y-4 lg:col-span-3">
     <elementsWidget v-if="event[0]" title="Upcoming Events">
       <div>
         <span class="font-bold text-gray-700">Date:</span>

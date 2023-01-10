@@ -5,7 +5,7 @@
     >
       <div class="flex items-center">
         <a
-          class="text-gray-900 text-base no-underline hover:no-underline font-extrabold"
+          class="text-lime-500 text-base no-underline hover:no-underline font-extrabold"
           href="/"
         >
           <span class="sr-only text-3xl">Ashrae Bi-State</span>
@@ -16,7 +16,7 @@
       <div class="block lg:hidden">
         <button
           id="nav-toggle"
-          class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-blue-500 appearance-none focus:outline-none"
+          class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-lime-500 hover:border-blue-500 appearance-none focus:outline-none"
           @click="toggle()"
         >
           <svg
@@ -38,49 +38,49 @@
         <ul class="list-reset lg:flex justify-end flex-1 items-center">
           <li class="text-center border-b lg:border-0 border-blue-100">
             <a
-              class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
+              class="block text-gray-600 no-underline hover:text-lime-500 hover:text-underline py-2 px-4"
               href="/"
               >Home</a
             >
           </li>
           <li class="text-center border-b lg:border-0 border-blue-100">
             <a
-              class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
+              class="block text-gray-600 no-underline hover:text-lime-500 hover:text-underline py-2 px-4"
               href="/history"
               >History</a
             >
           </li>
           <li class="text-center border-b lg:border-0 border-blue-100">
             <a
-              class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
+              class="block text-gray-600 no-underline hover:text-lime-500 hover:text-underline py-2 px-4"
               href="/officers"
               >Officers</a
             >
           </li>
           <li class="text-center border-b lg:border-0 border-blue-100">
             <a
-              class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
+              class="block text-gray-600 no-underline hover:text-lime-500 hover:text-underline py-2 px-4"
               href="/events"
               >Events</a
             >
           </li>
           <li class="text-center border-b lg:border-0 border-blue-100">
             <a
-              class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
+              class="block text-gray-600 no-underline hover:text-lime-500 hover:text-underline py-2 px-4"
               href="/newsletters"
               >Newsletters</a
             >
           </li>
           <li class="text-center border-b lg:border-0 border-blue-100">
             <a
-              class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
+              class="block text-gray-600 no-underline hover:text-lime-500 hover:text-underline py-2 px-4"
               href="/photos"
               >Photos</a
             >
           </li>
           <li class="text-center">
             <a
-              class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4"
+              class="block text-gray-600 no-underline hover:text-lime-500 hover:text-underline py-2 px-4"
               href="/contact"
               >Contact</a
             >
