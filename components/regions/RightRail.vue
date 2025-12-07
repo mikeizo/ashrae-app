@@ -1,19 +1,17 @@
 <template>
   <div class="w-full flex flex-col space-y-4 lg:col-span-3">
-    <elementsWidget v-if="event[0]" title="Upcoming Events">
+    <elementsWidget title="Upcoming Events">
       <div>
         <span class="font-bold text-gray-700">Date:</span>
-        {{ formatDate(event[0].field_date) }}
+        12/12/28
       </div>
       <div>
-        <span class="font-bold text-gray-700">Main Presentation:</span> <br />{{
-          event[0].field_main_presentation
-        }}
+        <span class="font-bold text-gray-700">Main Presentation:</span> <br />
+          Test Event
       </div>
       <div>
-        <span class="font-bold text-gray-700">Tech Session:</span> <br />{{
-          event[0].field_tech_session
-        }}
+        <span class="font-bold text-gray-700">Tech Session:</span> <br />
+        Test Session
       </div>
     </elementsWidget>
     <elementsWidget title="Follow Us">
@@ -57,11 +55,11 @@
       </form>
     </elementsWidget>
     <elementsWidget title="Scholarship Form">
-      <a :href="`${baseUrl}files/Applicant_Evaluation_Form.doc`">
+      <a>
         Evaluation Form
       </a>
       <br />
-      <a :href="`${baseUrl}files/Scholarship_Application.doc`">
+      <a>
         Scholarship Application
       </a>
     </elementsWidget>
@@ -71,7 +69,7 @@
 <script setup>
 const config = useRuntimeConfig()
 const baseUrl = config.public.apiBase
-const { data: event } = await useFetch(`${baseUrl}events/upcoming?_format=json`)
+// const { data: event } = await useFetch(`${baseUrl}events/upcoming?_format=json`)
 
 function formatDate(rawDate) {
   const date = new Date(rawDate)

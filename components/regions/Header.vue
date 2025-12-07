@@ -22,7 +22,6 @@
           <svg
             class="fill-current h-3 w-3"
             viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <title>Menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -71,13 +70,13 @@
               >Newsletters</a
             >
           </li>
-          <li class="text-center border-b lg:border-0 border-blue-100">
+          <!-- <li class="text-center border-b lg:border-0 border-blue-100">
             <a
               class="block text-gray-600 no-underline hover:text-lime-500 hover:text-underline py-2 px-4"
               href="/photos"
               >Photos</a
             >
-          </li>
+          </li> -->
           <li class="text-center">
             <a
               class="block text-gray-600 no-underline hover:text-lime-500 hover:text-underline py-2 px-4"

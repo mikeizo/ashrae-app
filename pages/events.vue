@@ -32,6 +32,8 @@
 </template>
 
 <script setup>
+import data from '~/assets/api/events.json'
+
 const config = useRuntimeConfig()
 const route = useRoute()
 let { page } = route.query
@@ -41,7 +43,7 @@ if (page) {
   query = `&page=${page}`
 }
 
-const { data } = await useAsyncData('page', () =>
-  $fetch(`${config.public.apiBase}events?_format=json${query}`)
-)
+// const { data } = await useAsyncData('page', () =>
+//   $fetch(`${config.public.apiBase}events?_format=json${query}`)
+// )
 </script>

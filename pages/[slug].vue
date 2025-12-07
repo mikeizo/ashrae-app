@@ -6,10 +6,22 @@
 </template>
 
 <script setup>
+import history from '~/assets/api/history.json'
+import officers from '~/assets/api/officers.json'
+
 const config = useRuntimeConfig()
 const route = useRoute()
-const { data: page } = await useFetch(
-  `${config.public.apiBase}${route.params.slug}?_format=json`,
-  { pick: ['title', 'body'] }
-)
+
+let page = null
+
+if (route.params.slug === 'history') {
+  page = history
+} else if (route.params.slug === 'officers') {
+  page = officers
+}
+
+// const { data: page } = await useFetch(
+//   `${config.public.apiBase}${route.params.slug}?_format=json`,
+//   { pick: ['title', 'body'] }
+// )
 </script>

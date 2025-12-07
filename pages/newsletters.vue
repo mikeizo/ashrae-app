@@ -15,7 +15,6 @@
                 <td class="px-5 whitespace-nowrap">
                   <a
                     class="hover:text-lime-500"
-                    :href="`${config.public.apiBase}${newsletter.field_newsletter}`"
                     target="_blank"
                     v-html="newsletter.field_newsletter_date"
                   />
@@ -31,6 +30,8 @@
   </RegionsContainer>
 </template>
 <script setup>
+import data from '~/assets/api/newsletters.json'
+
 const config = useRuntimeConfig()
 const route = useRoute()
 let { page } = route.query
@@ -38,7 +39,7 @@ let query = ''
 if (page) {
   query = `&page=${page}`
 }
-const { data } = await useAsyncData('page', () =>
-  $fetch(`${config.public.apiBase}newsletters?_format=json${query}`)
-)
+// const { data } = await useAsyncData('page', () =>
+//   $fetch(`${config.public.apiBase}newsletters?_format=json${query}`)
+// )
 </script>
